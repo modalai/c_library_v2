@@ -5637,23 +5637,23 @@
 	  <field type="uint64_t" name="utc_time_usec" units="us">utc time from gps module, from epoch</field> 
 	  <field type="uint64_t" name="time_rel_usec" units="us">relative time</field> 
 	  <field type="int32_t" name="lat" units="degE7">Latitude (WGS84, EGM96 ellipsoid)</field>
-      <field type="int32_t" name="lon" units="degE7">Longitude (WGS84, EGM96 ellipsoid)</field>
-      <field type="int32_t" name="alt" units="mm">Altitude (MSL). Positive for up. Note that virtually all GPS modules provide the MSL altitude in addition to the WGS84 altitude.</field>
+          <field type="int32_t" name="lon" units="degE7">Longitude (WGS84, EGM96 ellipsoid)</field>
+          <field type="int32_t" name="alt" units="mm">Altitude (MSL). Positive for up. Note that virtually all GPS modules provide the MSL altitude in addition to the WGS84 altitude.</field>
 	  <field type="float" name="speed_accuracy" units="m/s">GPS speed accuracy</field>
 	  <field type="float" name="cog_accuracy" units="m/s">GPS course accuracy</field>
 	  <field type="uint8_t" name="fix_type" enum="GPS_FIX_TYPE">GPS fix type.</field>
-      <field type="float" name="eph">GPS horizontal position accuracy</field>
-      <field type="float" name="epv">GPS vertical position accuracy</field>
-      <field type="float" name="hdop" units="m">GPS HDOP horizontal dilution of position</field>
-      <field type="float" name="vdop" units="m">GPS VDOP vertical dilution of position</field>
-      <field type="int32_t" name="noise" units="ms">GPS noise per millisecond</field>
-      <field type="int32_t" name="jam" units="ms">GPS noise per millisecond</field>       
-      <field type="float" name="vel" units="cm/s">GPS ground speed. If unknown, set to: UINT16_MAX</field>
-      <field type="float" name="vn" units="m/s">GPS velocity in NORTH direction in earth-fixed NED frame</field>
+          <field type="float" name="eph">GPS horizontal position accuracy</field>
+          <field type="float" name="epv">GPS vertical position accuracy</field>
+          <field type="float" name="hdop" units="m">GPS HDOP horizontal dilution of position</field>
+          <field type="float" name="vdop" units="m">GPS VDOP vertical dilution of position</field>
+          <field type="int32_t" name="noise" units="ms">GPS noise per millisecond</field>
+          <field type="int32_t" name="jam" units="ms">GPS noise per millisecond</field>       
+          <field type="float" name="vel" units="cm/s">GPS ground speed. If unknown, set to: UINT16_MAX</field>
+          <field type="float" name="vn" units="m/s">GPS velocity in NORTH direction in earth-fixed NED frame</field>
 	  <field type="float" name="ve" units="m/s">GPS velocity in EAST direction in earth-fixed NED frame</field>
 	  <field type="float" name="vd" units="m/s">GPS velocity in DOWN direction in earth-fixed NED frame</field>
-      <field type="float" name="cog" units="cdeg">Course over ground (NOT heading, but direction of movement) in degrees * 100, 0.0..359.99 degrees. If unknown, set to: UINT16_MAX</field>
-      <field type="uint8_t" name="satellites_visible">Number of satellites visible. If unknown, set to 255</field> 
+          <field type="float" name="cog" units="cdeg">Course over ground (NOT heading, but direction of movement) in degrees * 100, 0.0..359.99 degrees. If unknown, set to: UINT16_MAX</field>
+          <field type="uint8_t" name="satellites_visible">Number of satellites visible. If unknown, set to 255</field> 
 	  <field type="uint8_t" name="use_feature" units="bitmask">User feature override</field> 
 	</message>  
     
