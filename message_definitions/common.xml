@@ -5629,7 +5629,7 @@
 	  <field type="int16_t" name="avg_cno" units="dB">Avg CN0 of overhead only satellites.</field>  
 	  <field type="uint64_t" name="epoch_time_usec" units="us">GPS Epoch time</field> 
 	  <field type="uint8_t" name="use_feature" units="bitmask">User feature override</field> 
-	</message>  
+    </message>  
 	
     <message id="96" name="VEHICLE_GPS_POSITION">
 	  <description>vehicle position gps message.  Position info on the gps position state of the system. This is NOT the global position estimate of the system.</description>	
@@ -5655,7 +5655,21 @@
           <field type="float" name="cog" units="cdeg">Course over ground (NOT heading, but direction of movement) in degrees * 100, 0.0..359.99 degrees. If unknown, set to: UINT16_MAX</field>
           <field type="uint8_t" name="satellites_visible">Number of satellites visible. If unknown, set to 255</field> 
 	  <field type="uint8_t" name="use_feature" units="bitmask">User feature override</field> 
-	</message>  
+    </message>  
+
+    <message id="97" name="VISION_MARKER_ESTIMATE">
+      <description>April Tag Position Data from a vision source.</description>
+      <field type="uint64_t" name="usec" units="us">timestamp at the middle of the frame exposure in monotonic time</field>      
+      <field type="int32_t" name="id">id number of the tag</field>
+      <field type="float" name="size_m" units="m">Tag size in meters</field>
+      <field type="float" name="tx" units="m">x location of the tag with respect to camera frame in meters</field>
+      <field type="float" name="ty" units="m">y location of the tag with respect to camera frame in meters</field>
+      <field type="float" name="tz" units="m">z location of the tag with respect to camera frame in meters</field>
+      <field type="float[9]" name="R">rotation matrix from tag frame to camera frame</field>
+      <field type="uint16_t" name="int_reserved1">int reserved 1</field>
+      <field type="uint16_t" name="int_reserved2">int reserved 2</field>
+      <field type="float" name="float_reserved3">float reserved 1</field>
+    </message>
     
     <message id="100" name="OPTICAL_FLOW">
       <description>Optical flow from a flow sensor (e.g. optical mouse sensor)</description>
