@@ -5665,7 +5665,9 @@
       <field type="float" name="tx" units="m">x location of the tag with respect to camera frame in meters</field>
       <field type="float" name="ty" units="m">y location of the tag with respect to camera frame in meters</field>
       <field type="float" name="tz" units="m">z location of the tag with respect to camera frame in meters</field>
-      <field type="float[9]" name="R">rotation matrix from tag frame to camera frame</field>
+      <field type="float" name="yaw" units="m">yaw of tag with respect to camera frame in meters</field>
+      <field type="float[9]" name="R" units="m">rotation with respect to camera frame in meters</field>
+
       <field type="uint16_t" name="int_reserved1">int reserved 1</field>
       <field type="uint16_t" name="int_reserved2">int reserved 2</field>
       <field type="float" name="float_reserved3">float reserved 1</field>
